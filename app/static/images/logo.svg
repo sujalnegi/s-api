@@ -1,0 +1,49 @@
+<svg width="450" height="90" viewBox="0 0 450 90" xmlns="http://www.w3.org/2000/svg">
+  <rect width="450" height="90" rx="10" fill="#1a1a1a" />
+  
+  <g transform="translate(20, 20)">
+    <!-- S (Orange) -->
+    <path fill="#FF8C00" d="M10 0 h20 v10 h-20 z M0 10 h10 v10 h-10 z M30 10 h10 v10 h-10 z M10 20 h20 v10 h-20 z M30 30 h10 v10 h-10 z M10 40 h20 v10 h-20 z" />
+    
+    <!-- a (White) x=50 -->
+    <g transform="translate(50, 0)">
+       <path fill="#FFFFFF" d="M10 10 h20 v10 h-20 z M0 20 h10 v10 h-10 z M30 20 h10 v10 h-10 z M0 30 h40 v10 h-40 z M0 40 h10 v10 h-10 z M30 40 h10 v10 h-10 z" />
+    </g>
+
+    <!-- m (Orange) x=100 -->
+    <g transform="translate(100, 0)">
+       <path fill="#FF8C00" d="M0 10 h20 v10 h-20 z M30 10 h20 v10 h-20 z M0 20 h10 v10 h-10 z M20 20 h10 v10 h-10 z M40 20 h10 v10 h-10 z M0 30 h10 v20 h-10 z M40 30 h10 v20 h-10 z" />
+    </g>
+
+    <!-- a (White) x=160 -->
+    <g transform="translate(160, 0)">
+       <path fill="#FFFFFF" d="M10 10 h20 v10 h-20 z M0 20 h10 v10 h-10 z M30 20 h10 v10 h-10 z M0 30 h40 v10 h-40 z M0 40 h10 v10 h-10 z M30 40 h10 v10 h-10 z" />
+    </g>
+
+    <!-- r (White) x=210 -->
+    <g transform="translate(210, 0)">
+       <path fill="#FFFFFF" d="M10 10 h20 v10 h-20 z M0 20 h10 v10 h-10 z M30 20 h10 v10 h-10 z M0 30 h10 v20 h-10 z" />
+    </g>
+
+    <!-- i (Gray) x=260 -->
+    <g transform="translate(260, 0)">
+       <path fill="#AAAAAA" d="M0 0 h10 v10 h-10 z M0 20 h10 v30 h-10 z" />
+    </g>
+
+    <!-- t (Orange) x=280 -->
+    <g transform="translate(280, 0)">
+       <path fill="#FF8C00" d="M10 0 h10 v50 h-10 z M0 10 h30 v10 h-30 z M20 40 h10 v10 h-10 z" />
+    </g>
+    
+    <!-- a (White) x=320 -->
+    <g transform="translate(320, 0)">
+       <path fill="#FFFFFF" d="M10 10 h20 v10 h-20 z M0 20 h10 v10 h-10 z M30 20 h10 v10 h-10 z M0 30 h40 v10 h-40 z M0 40 h10 v10 h-10 z M30 40 h10 v10 h-10 z" />
+    </g>
+
+    <!-- n (Gray) x=370 -->
+    <g transform="translate(370, 0)">
+       <path fill="#AAAAAA" d="M0 10 h30 v10 h-30 z M0 20 h10 v30 h-10 z M30 20 h10 v30 h-10 z" />
+    </g>
+
+  </g>
+</svg>

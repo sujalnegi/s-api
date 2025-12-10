@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Samaritan AI{% endblock %}
+
+{% block content %}
+<div class="max-w-6xl mx-auto">
+  <header class="mb-12 text-center">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-4 animate__animated animate__fadeInDown">
+      Welcome back, <span class="font-pixel text-blue-600 text-2xl leading-relaxed">{{
+        session.get('user', {}).get('name', 'User') }}</span>
+    </h1>
+    <p class="text-xl text-gray-600 animate__animated animate__fadeInUp animate__delay-1s">
+      Your AI-powered productivity platform is ready. What would you like to create today?
+    </p>
+  </header>
+
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+    <a href="/writer"
+      class="group block bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 p-6 transform hover:-translate-y-1">
+      <div
+        class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors duration-300">
+        <span class="text-2xl group-hover:text-white transition-colors duration-300">✍️</span>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Shakespeare</h3>
+      <p class="text-gray-500 text-sm">Generate creative essays, emails, and blog posts instantly like Shakespeare
+        himself.</p>
+    </a>
+
+    <a href="/summarizer"
+      class="group block bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 p-6 transform hover:-translate-y-1">
+      <div
+        class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-purple-600 transition-colors duration-300">
+        <span class="text-2xl group-hover:text-white transition-colors duration-300">📰</span>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Summarizer</h3>
+      <p class="text-gray-500 text-sm">Now summarize your articles and essays into keypoints to study the night before
+        exams.</p>
+    </a>
+
+
+    <a href="/code-explain"
+      class="group block bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 p-6 transform hover:-translate-y-1">
+      <div
+        class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-600 transition-colors duration-300">
+        <span class="text-2xl group-hover:text-white transition-colors duration-300">💻</span>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Decypher</h3>
+      <p class="text-gray-500 text-sm">Finally get a chance to understand the code you have copied</p>
+    </a>
+
+
+    <a href="/grammar"
+      class="group block bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 p-6 transform hover:-translate-y-1">
+      <div
+        class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-orange-600 transition-colors duration-300">
+        <span class="text-2xl group-hover:text-white transition-colors duration-300">✨</span>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Grammer checkker</h3>
+      <p class="text-gray-500 text-sm">Just like that annoying friend who keeps on correcting your grammer</p>
+    </a>
+  </section>
+
+
+  <section
+    class="bg-gradient-to-br from-gray-50 to-white dark:from-slate-800 dark:to-slate-900 rounded-3xl border border-gray-200 dark:border-slate-700 p-8 md:p-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+      <span
+        class="bg-gray-900 dark:bg-slate-700 text-white w-8 h-8 rounded-full flex items-center justify-center text-lg">?</span>
+      Getting Started Guide
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div
+            class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-200 flex items-center justify-center font-bold flex-shrink-0">
+            1</div>
+          <div>
+            <h4 class="font-semibold text-gray-900">Choose a Tool</h4>
+            <p class="text-gray-600 text-sm mt-1">Select one of the AI tools from the dashboard or the navigation bar
+              above.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-200 flex items-center justify-center font-bold flex-shrink-0">
+            2</div>
+          <div>
+            <h4 class="font-semibold text-gray-900">Input Your Content</h4>
+            <p class="text-gray-600 text-sm mt-1">Paste text, code, or type your prompt into the input area.</p>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div
+            class="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-200 flex items-center justify-center font-bold flex-shrink-0">
+            3</div>
+          <div>
+            <h4 class="font-semibold text-gray-900">Generate Results</h4>
+            <p class="text-gray-600 text-sm mt-1">Click the action button and wait for the AI to process your request.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-200 flex items-center justify-center font-bold flex-shrink-0">
+            4</div>
+          <div>
+            <h4 class="font-semibold text-gray-900">Review & Copy</h4>
+            <p class="text-gray-600 text-sm mt-1">Read the generated output and copy it to your clipboard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

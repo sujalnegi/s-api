@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Shakespeare - Samaritan AI{% endblock %}
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <header class="mb-12 text-center">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-4 animate__animated animate__fadeInDown">
+            <span class="text-4xl mr-2">✍️</span> <span
+                class="font-pixel text-blue-600 text-2xl leading-relaxed">Shakespeare</span>
+        </h1>
+        <p class="text-xl text-gray-600 animate__animated animate__fadeInUp animate__delay-1s">Generate high-quality
+            content for emails, blogs, just like Shakespeare himself.</p>
+    </header>
+
+    <div
+        class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 p-8 mb-8">
+        <form action="/writer" method="POST">
+            <div class="mb-4">
+                <label for="prompt" class="block text-sm font-medium text-gray-700 mb-2">What would you like to
+                    write?</label>
+                <textarea id="prompt" name="prompt" rows="8"
+                    class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition resize-none"
+                    placeholder="E.g., Write a professional email to a client about a project delay..."></textarea>
+            </div>
+            <div class="flex justify-end">
+                <button type="submit"
+                    class="bg-blue-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-blue-700 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <span>Generate Content</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    {% if generated_content %}
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8 animate__animated animate__fadeInUp">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 font-pixel text-blue-600">Generated Content</h2>
+        <div class="prose max-w-none text-gray-700 leading-relaxed">
+            {{ generated_content | safe }}
+        </div>
+        <div class="mt-6 flex justify-end">
+            <button onclick="navigator.clipboard.writeText(this.parentElement.previousElementSibling.innerText)"
+                class="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-2 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                    <path
+                        d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+                </svg>
+                Copy to Clipboard
+            </button>
+        </div>
+    </div>
+    {% endif %}
+
+    <section class="bg-blue-50 rounded-2xl border border-blue-100 p-6">
+        <h3 class="text-lg font-bold text-blue-900 mb-4 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clip-rule="evenodd" />
+            </svg>
+            How to use Shakespeare
+        </h3>
+        <ul class="space-y-3 text-blue-800 text-sm">
+            <li class="flex gap-2">
+                <span class="font-bold">•</span>
+                <span><strong>Be Specific:</strong> Instead of "write an email", try "write a polite email to my boss
+                    asking for a day off next Friday".</span>
+            </li>
+            <li class="flex gap-2">
+                <span class="font-bold">•</span>
+                <span><strong>Set the Tone:</strong> Mention if you want the tone to be professional, casual, funny, or
+                    persuasive.</span>
+            </li>
+            <li class="flex gap-2">
+                <span class="font-bold">•</span>
+                <span><strong>Provide Context:</strong> Include key details like names, dates, or specific points you
+                    want covered.</span>
+            </li>
+        </ul>
+    </section>
+</div>
+{% endblock%}
