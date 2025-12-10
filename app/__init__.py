@@ -9,6 +9,11 @@ def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
 
+    import os
+    instance_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', 'instance')
+    if not os.path.exists(instance_path):
+        os.makedirs(instance_path)
+
     @app.context_processor
     def inject_config():
         return dict(config=app.config)
