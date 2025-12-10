@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB9NzjjEOcXD-CUbw7rolhYfFlQiBX4-rE",
+  apiKey: "AIzaSyBMNP5msn_lfJY1aLu5F-yhRnfXnQ7vU7A",
   authDomain: "samaritan-fc9b1.firebaseapp.com",
   projectId: "samaritan-fc9b1",
   storageBucket: "samaritan-fc9b1.appspot.com",
@@ -54,3 +54,4 @@ if (document.readyState === "loading") {
 } else {
   init();
 }
+
