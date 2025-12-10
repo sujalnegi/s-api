@@ -5,7 +5,7 @@ import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyB9NzjjEOcXD-CUbw7rolhYfFlQiBX4-rE",
+  apiKey: "AIzaSyBMNP5msn_lfJY1aLu5F-yhRnfXnQ7vU7A",
 
   authDomain: "samaritan-fc9b1.firebaseapp.com",
 
@@ -24,3 +24,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const analytics = getAnalytics(app);
+
